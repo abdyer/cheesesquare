@@ -152,13 +152,30 @@
 
     </android.support.v4.widget.NestedScrollView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_height="wrap_content"
+    <android.support.design.widget.SupportFloatingActionsMenu
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:clickable="true"
+        app:fab_expandDirection="down"
+        app:fab_labelsPosition="left"
         app:layout_anchor="@id/appbar"
-        app:layout_anchorGravity="bottom|right|end"
-        android:src="@drawable/ic_discuss"
-        android:layout_margin="@dimen/fab_margin"
-        android:clickable="true"/>
+        app:layout_anchorGravity="bottom|right|end">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@android:drawable/ic_menu_camera"
+            app:fab_size="mini"
+            app:fab_title="@string/camera"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@android:drawable/ic_menu_gallery"
+            app:fab_size="mini"
+            app:fab_title="@string/gallery"/>
+
+    </android.support.design.widget.SupportFloatingActionsMenu>
 
 </android.support.design.widget.CoordinatorLayout>
